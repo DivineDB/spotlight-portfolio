@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Link2, MessageCircle } from "lucide-react";
 
 interface ContactCardProps {
   isDark: boolean;
@@ -187,8 +187,8 @@ export default function ContactCard({ isDark }: ContactCardProps) {
           >
             {[
               { icon: Github, href: "https://github.com", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+              { icon: Link2, href: "https://linkedin.com", label: "LinkedIn" },
+              { icon: MessageCircle, href: "https://twitter.com", label: "Twitter" },
             ].map((social, index) => (
               <motion.a
                 key={social.label}
