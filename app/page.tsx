@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MoonStar, ArrowUp } from "lucide-react";
 import { useMemo, useState, useEffect } from "react";
 import Image from "next/image";
+import ContactCard from "@/components/ContactCard";
 
 const navItems = ["Home", "Work", "Photos", "Contact"];
 
@@ -567,90 +568,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen py-16 px-[200px]">
-        <div className="w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
-            <h2 className="text-4xl font-bold sm:text-6xl lg:text-[72px]">
-              Get In Touch
-            </h2>
-            <p className="mt-2 text-lg opacity-80 sm:text-xl">
-              Let&apos;s create something amazing together
-            </p>
-          </motion.div>
-
-          <div className="max-w-2xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="relative bg-black/10 backdrop-blur-sm rounded-2xl border p-8"
-              style={{
-                borderColor: colors.cardBorder,
-              }}
-            >
-              <form className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: colors.textPrimary }}
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-2 rounded-lg border bg-black/20 border-white/20 text-white placeholder-white/60"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: colors.textPrimary }}
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-2 rounded-lg border bg-black/20 border-white/20 text-white placeholder-white/60"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: colors.textPrimary }}
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-4 py-2 rounded-lg border bg-black/20 border-white/20 text-white placeholder-white/60 resize-none"
-                    placeholder="Your message..."
-                  />
-                </div>
-                <div>
-                  <button
-                    type="submit"
-                    className="w-full py-3 rounded-lg font-medium transition-colors bg-[#4A9E61] text-white"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            </motion.div>
-          </div>
-        </div>
+        <ContactCard isDark={isDark} />
       </section>
 
       {/* Footer */}
