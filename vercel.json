@@ -1,0 +1,9 @@
+{
+  "git": {
+    "deploymentEnabled": true
+  },
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "framework": "nextjs"
+}
