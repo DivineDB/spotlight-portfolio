@@ -5,6 +5,7 @@ import { MoonStar, ArrowUp } from "lucide-react";
 import { useMemo, useState, useEffect } from "react";
 import Image from "next/image";
 import ContactCard from "@/components/ContactCard";
+import MonikaCard from "@/components/MonikaCard";
 
 const navItems = ["Home", "Work", "Photos", "Contact"];
 
@@ -568,7 +569,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen py-16 px-[200px]">
-        <ContactCard isDark={isDark} />
+        <MonikaCard isDark={isDark} />
       </section>
 
       {/* Footer */}
